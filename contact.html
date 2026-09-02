@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Sharada Consultant and Developers</title>
+  <meta name="description" content="Get in touch with Sharada Consultant and Developers. Contact Shekhar Parit for construction services.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:;base64,=">
+</head>
+<body>
+
+  <div id="preloader"><div class="ta-preloader-block"><span class="preloader-text">Sharada Consultant</span></div></div>
+
+
+  <header class="header transparent">
+    <div class="container"><div class="header-inner">
+      <a href="index.html" class="nav-logo"><div class="nav-logo-text"><span class="nav-logo-name">Sharada Consultant</span><span class="nav-logo-tagline">And Developers</span></div></a>
+      <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li><li><a href="services.html">Services</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="activities.html">Activities</a></li><li><a href="contact.html" class="nav-cta active">Contact Us</a></li></ul>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div></div>
+  </header>
+  <div class="mobile-menu"><a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a href="activities.html">Activities</a><a href="contact.html">Contact</a></div>
+
+  <section class="page-hero">
+    <div class="page-hero-bg"><img src="images/completed/Entrance Gate.jpeg" alt="Contact Us"></div>
+    <div class="page-hero-content">
+      <span class="section-subtitle" style="color: var(--rich-gold);">Get In Touch</span>
+      <h1>Contact Us</h1>
+      <p>Let's discuss your project and bring your vision to life</p>
+    </div>
+  </section>
+
+  <section class="inner-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="reveal-left">
+          <div class="contact-form">
+            <span class="section-subtitle">Send a Message</span>
+            <h2 class="section-title" style="font-size: 2rem;">Let's Start a Conversation</h2>
+            <div class="gold-line"></div>
+            <form id="contactForm" onsubmit="handleSubmit(event)">
+              <div class="form-row">
+                <div class="form-group"><label for="firstName">First Name</label><input type="text" id="firstName" placeholder="Enter your first name" required></div>
+                <div class="form-group"><label for="lastName">Last Name</label><input type="text" id="lastName" placeholder="Enter your last name" required></div>
+              </div>
+              <div class="form-row">
+                <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" placeholder="your@email.com" required></div>
+                <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" placeholder="+91 XXXXX XXXXX" required></div>
+              </div>
+              <div class="form-group"><label for="service">Service Interested In</label><select id="service" required><option value="">Select a service</option><option value="construction">Construction</option><option value="pmc">Project Management Consultancy</option><option value="interior">Interior Design</option><option value="land">Land Development</option><option value="consultation">General Consultation</option></select></div>
+              <div class="form-group"><label for="message">Your Message</label><textarea id="message" placeholder="Tell us about your project..." required></textarea></div>
+              <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Send Message</button>
+            </form>
+          </div>
+        </div>
+        <div class="reveal-right">
+          <span class="section-subtitle">Contact Details</span>
+          <h2 class="section-title" style="font-size: 2rem;">Reach Us Directly</h2>
+          <div class="gold-line"></div>
+          <div class="contact-info-card"><h4>Office Address</h4><p>Sharada Consultant and Developers<br>Baramati, Maharashtra 413102<br>India</p></div>
+          <div class="contact-info-card"><h4>Phone</h4><p>+91 98765 43210<br>+91 98765 43211</p></div>
+          <div class="contact-info-card"><h4>Email</h4><p>info@sharadaconsultant.com<br>shekhar@sharadaconsultant.com</p></div>
+          <div class="contact-info-card"><h4>Working Hours</h4><p>Monday to Saturday: 9:00 AM - 6:00 PM<br>Sunday: By Appointment Only</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-content reveal">
+      <span class="section-subtitle" style="color: var(--rich-gold);">Ready to Build?</span>
+      <h2>Your Dream Project Awaits</h2>
+      <p>Take the first step towards your dream home or commercial space.</p>
+      <a href="tel:+919876543210" class="btn btn-primary">Call Us Now</a>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="index.html" class="nav-logo" style="margin-bottom: 1rem;"><div class="nav-logo-text"><span class="nav-logo-name" style="color: #fff;">Sharada Consultant</span><span class="nav-logo-tagline">And Developers</span></div></a><p>Premium construction and development services led by Shekhar Parit.</p></div><div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="projects.html">Projects</a></li><li><a href="services.html">Services</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Construction</a></li><li><a href="services.html">Project Management</a></li><li><a href="services.html">Interior Design</a></li><li><a href="services.html">Land Development</a></li></ul></div><div class="footer-col"><h4>Contact Info</h4><div class="footer-contact-item"><span class="footer-contact-label">Phone</span><span>+91 98765 43210</span></div><div class="footer-contact-item"><span class="footer-contact-label">Email</span><span>info@sharadaconsultant.com</span></div><div class="footer-contact-item"><span class="footer-contact-label">Office</span><span>Baramati, Maharashtra, India</span></div></div></div><div class="footer-bottom"><span>&copy; 2025 Sharada Consultant and Developers. All rights reserved.</span><span>Designed by <a href="#">NexGravision</a></span></div></div></footer>
+
+  <div class="lightbox"><button class="lightbox-close" aria-label="Close">&times;</button><button class="lightbox-nav lightbox-prev" aria-label="Previous">&#8249;</button><img src="" alt="Gallery Image"><button class="lightbox-nav lightbox-next" aria-label="Next">&#8250;</button></div>
+  <script src="js/main.js"></script>
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const firstName = form.firstName.value;
+      const lastName = form.lastName.value;
+      const email = form.email.value;
+      const phone = form.phone.value;
+      const service = form.service.value;
+      const message = form.message.value;
+      const subject = `Project Inquiry from ${firstName} ${lastName}`;
+      const body = `Hello Sharada Consultant and Developers,%0D%0A%0D%0AI am ${firstName} ${lastName} and I am interested in your ${service} services.%0D%0A%0D%0APhone: ${phone}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage: ${message}%0D%0A%0D%0ALooking forward to hearing from you.%0D%0A%0D%0ABest regards,%0D%0A${firstName} ${lastName}`;
+      window.location.href = `mailto:info@sharadaconsultant.com?subject=${subject}&body=${body}`;
+      alert('Thank you for your message! Your email client will now open to send the message.');
+      form.reset();
+    }
+  </script>
+</body>
+</html>
