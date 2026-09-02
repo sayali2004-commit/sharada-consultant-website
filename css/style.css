@@ -28,7 +28,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 body {
@@ -216,12 +216,10 @@ img {
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   border: 2px solid var(--rich-gold);
   transition: width 0.3s, height 0.3s;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 2px;
 }
 
 .header.scrolled .nav-logo img {
@@ -1701,12 +1699,10 @@ img {
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   border: 2px solid var(--rich-gold);
   flex-shrink: 0;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 2px;
 }
 
 .footer-brand .footer-logo-name {
