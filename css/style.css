@@ -449,9 +449,9 @@ img {
   inset: 0;
   z-index: 2;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
-  padding: calc(var(--header-height) + 50px) calc(5% + 20px) 60px;
+  padding: calc(var(--header-height) + 40px) calc(5% + 20px) 80px;
   background: linear-gradient(135deg, rgba(10, 10, 26, 0.7) 0%, rgba(10, 10, 26, 0.3) 100%);
 }
 
