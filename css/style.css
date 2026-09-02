@@ -216,10 +216,11 @@ img {
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   border: 2px solid var(--rich-gold);
   transition: width 0.3s, height 0.3s;
+  background: #fff;
 }
 
 .header.scrolled .nav-logo img {
@@ -1699,10 +1700,11 @@ img {
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   border: 2px solid var(--rich-gold);
   flex-shrink: 0;
+  background: #fff;
 }
 
 .footer-brand .footer-logo-name {
