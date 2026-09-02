@@ -1701,12 +1701,7 @@ img {
   margin-top: 2px;
 }
 
-.footer-contact-label {
-  color: var(--rich-gold);
-  font-weight: 600;
-  min-width: 70px;
-  flex-shrink: 0;
-}
+/* footer-contact-label removed */
 
 .footer-bottom {
   padding: 2rem 0;
