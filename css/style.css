@@ -213,8 +213,8 @@ img {
 }
 
 .nav-logo img {
-  width: 45px;
-  height: 45px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center 55%;
@@ -1697,8 +1697,8 @@ img {
 }
 
 .footer-brand-logo img {
-  width: 55px;
-  height: 55px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center 55%;
