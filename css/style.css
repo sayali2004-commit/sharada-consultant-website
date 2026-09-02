@@ -216,8 +216,8 @@ img {
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  object-fit: contain;
-  object-position: center;
+  object-fit: cover;
+  object-position: center 55%;
   border: 2px solid var(--rich-gold);
   transition: width 0.3s, height 0.3s;
   background: #fff;
@@ -1700,8 +1700,8 @@ img {
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  object-fit: contain;
-  object-position: center;
+  object-fit: cover;
+  object-position: center 55%;
   border: 2px solid var(--rich-gold);
   flex-shrink: 0;
   background: #fff;
