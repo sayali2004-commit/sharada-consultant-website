@@ -1256,6 +1256,39 @@ img {
 }
 
 /* ===== PROJECTS PAGE ===== */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 10px 24px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1.5px solid var(--border-color);
+  background: #fff;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filter-btn:hover {
+  border-color: var(--rich-gold);
+  color: var(--rich-gold);
+}
+
+.filter-btn.active {
+  background: var(--rich-gold);
+  border-color: var(--rich-gold);
+  color: #fff;
+}
+
 .projects-page-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1267,6 +1300,7 @@ img {
   background: #fff;
   transition: all 0.5s;
   border: 1px solid var(--border-color);
+  opacity: 1;
 }
 
 .project-page-card:hover {
@@ -2050,6 +2084,13 @@ img {
   .form-row {
     grid-template-columns: 1fr;
   }
+  .filter-buttons {
+    gap: 0.5rem;
+  }
+  .filter-btn {
+    padding: 8px 16px;
+    font-size: 0.75rem;
+  }
   .form-group input,
   .form-group textarea,
   .form-group select {
@@ -2290,6 +2331,14 @@ img {
   }
   .contact-form {
     padding: 1.5rem 1.25rem;
+  }
+  .filter-buttons {
+    gap: 0.4rem;
+  }
+  .filter-btn {
+    padding: 7px 12px;
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
   }
   .form-group label {
     font-size: 0.72rem;
