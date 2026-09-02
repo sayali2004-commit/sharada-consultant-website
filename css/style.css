@@ -421,6 +421,7 @@ img {
   position: relative;
   height: 100vh;
   min-height: 600px;
+  overflow: hidden;
 }
 
 .hero-slide {
@@ -627,6 +628,8 @@ img {
   padding: 60px 0;
   background: #fff;
   border-bottom: 1px solid var(--border-color);
+  position: relative;
+  z-index: 2;
 }
 
 .counter-grid {
