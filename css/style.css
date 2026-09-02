@@ -420,7 +420,7 @@ img {
 .hero-slider {
   position: relative;
   height: 100vh;
-  min-height: 650px;
+  min-height: 700px;
   overflow: hidden;
 }
 
@@ -451,7 +451,7 @@ img {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: calc(var(--header-height) + 40px) calc(5% + 20px) 80px;
+  padding: calc(var(--header-height) + 40px) calc(5% + 20px) 100px;
   background: linear-gradient(135deg, rgba(10, 10, 26, 0.7) 0%, rgba(10, 10, 26, 0.3) 100%);
 }
 
