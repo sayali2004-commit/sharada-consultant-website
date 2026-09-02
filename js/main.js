@@ -142,22 +142,30 @@ counters.forEach(c => counterObserver.observe(c));
 const filterBtns = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card, .project-page-card');
 
+function applyFilter(filter) {
+  projectCards.forEach(card => {
+    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+      card.style.display = '';
+      setTimeout(() => card.style.opacity = '1', 50);
+    } else {
+      card.style.opacity = '0';
+      setTimeout(() => card.style.display = 'none', 400);
+    }
+  });
+}
+
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     filterBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    const filter = btn.getAttribute('data-filter');
-    projectCards.forEach(card => {
-      if (filter === 'all' || card.getAttribute('data-category') === filter) {
-        card.style.display = '';
-        setTimeout(() => card.style.opacity = '1', 50);
-      } else {
-        card.style.opacity = '0';
-        setTimeout(() => card.style.display = 'none', 400);
-      }
-    });
+    applyFilter(btn.getAttribute('data-filter'));
   });
 });
+
+const activeFilter = document.querySelector('.filter-btn.active');
+if (activeFilter) {
+  applyFilter(activeFilter.getAttribute('data-filter'));
+}
 
 // ===== GALLERY LIGHTBOX =====
 const lightbox = document.querySelector('.lightbox');
