@@ -2117,7 +2117,15 @@ img {
   .footer-contact-item {
     font-size: 0.85rem;
   }
-  .footer-brand p {
+.footer-brand .nav-logo-name {
+  color: var(--rich-gold) !important;
+}
+
+.footer-brand .nav-logo-tagline {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-brand p {
     font-size: 0.85rem;
   }
   .mobile-menu a {
