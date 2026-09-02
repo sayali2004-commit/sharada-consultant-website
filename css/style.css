@@ -450,7 +450,7 @@ img {
   z-index: 2;
   display: flex;
   align-items: center;
-  padding: 0 calc(5% + 20px);
+  padding: 0 calc(5% + 20px) 60px;
   background: linear-gradient(135deg, rgba(10, 10, 26, 0.7) 0%, rgba(10, 10, 26, 0.3) 100%);
 }
 
@@ -1673,7 +1673,7 @@ img {
 
 /* ===== FOOTER ===== */
 .footer {
-  background: var(--deep-navy);
+  background: #0d1b2a;
   padding: 60px 0 0;
   color: rgba(255, 255, 255, 0.6);
   position: relative;
@@ -1926,7 +1926,7 @@ img {
     padding: 5px 14px;
   }
   .hero-overlay {
-    padding: 0 20px;
+    padding: 0 20px 60px;
   }
   .hero-content {
     padding-top: 60px;
