@@ -1690,6 +1690,15 @@ img {
   gap: 0.75rem;
   margin-bottom: 1rem;
   font-size: 0.9rem;
+  align-items: flex-start;
+}
+
+.footer-contact-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--rich-gold);
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 
 .footer-contact-label {
