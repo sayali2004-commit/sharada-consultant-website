@@ -450,13 +450,14 @@ img {
   z-index: 2;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   padding: 0 calc(5% + 20px) 60px;
+  padding-top: calc(var(--header-height) + 40px);
   background: linear-gradient(135deg, rgba(10, 10, 26, 0.7) 0%, rgba(10, 10, 26, 0.3) 100%);
 }
 
 .hero-content {
   max-width: 700px;
-  padding-top: var(--header-height);
 }
 
 .hero-badge {
@@ -1673,9 +1674,9 @@ img {
 
 /* ===== FOOTER ===== */
 .footer {
-  background: #0d1b2a;
+  background: #f8f5f0;
   padding: 60px 0 0;
-  color: rgba(255, 255, 255, 0.6);
+  color: #333;
   position: relative;
   z-index: 1;
 }
@@ -1685,23 +1686,88 @@ img {
   grid-template-columns: 2fr 1fr 1fr 1.5fr;
   gap: 3rem;
   padding-bottom: 4rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: none;
+}
+
+.footer-brand .footer-logo-name {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0a0a1a;
+  line-height: 1.2;
+}
+
+.footer-brand .footer-logo-tagline {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--rich-gold);
+  margin-top: 4px;
+}
+
+.footer-brand .footer-logo-line {
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--rich-gold);
+  margin-top: 12px;
 }
 
 .footer-brand p {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   font-size: 0.9rem;
   line-height: 1.8;
+  color: #555;
+}
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 1.5rem;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid var(--rich-gold);
+  color: var(--rich-gold);
+  transition: all 0.3s;
+}
+
+.footer-social a:hover {
+  background: var(--rich-gold);
+  color: #fff;
+}
+
+.footer-social svg {
+  width: 16px;
+  height: 16px;
 }
 
 .footer-col h4 {
-  color: #fff;
+  color: #0a0a1a;
   font-family: 'Inter', sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-col h4::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: var(--rich-gold);
+  margin-top: 8px;
 }
 
 .footer-col ul {
@@ -1712,13 +1778,23 @@ img {
   margin-bottom: 0.75rem;
 }
 
-.footer-col ul a {
-  color: rgba(255, 255, 255, 0.5);
+.footer-col ul li a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #555;
   font-size: 0.9rem;
   transition: color 0.3s;
 }
 
-.footer-col ul a:hover {
+.footer-col ul li a::before {
+  content: '>';
+  color: var(--rich-gold);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.footer-col ul li a:hover {
   color: var(--rich-gold);
 }
 
@@ -1728,6 +1804,7 @@ img {
   margin-bottom: 1rem;
   font-size: 0.9rem;
   align-items: flex-start;
+  color: #555;
 }
 
 .footer-contact-icon {
@@ -1738,14 +1815,40 @@ img {
   margin-top: 2px;
 }
 
-/* footer-contact-label removed */
+.footer-contact-label {
+  display: none;
+}
 
 .footer-bottom {
-  padding: 2rem 0;
+  background: #0a0a1a;
+  margin: 0 -50vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 1.8rem 50vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-bottom-icon {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -22px;
+  width: 44px;
+  height: 44px;
+  background: #0a0a1a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-bottom-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--rich-gold);
 }
 
 .footer-bottom a {
@@ -2117,15 +2220,7 @@ img {
   .footer-contact-item {
     font-size: 0.85rem;
   }
-.footer-brand .nav-logo-name {
-  color: var(--rich-gold) !important;
-}
-
-.footer-brand .nav-logo-tagline {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.footer-brand p {
+  .footer-col ul li a {
     font-size: 0.85rem;
   }
   .mobile-menu a {
@@ -2408,8 +2503,17 @@ img {
     font-size: 0.8rem;
   }
   .footer-bottom {
-    padding: 1.5rem 0;
+    margin: 0;
+    padding: 1.5rem 20px;
     font-size: 0.72rem;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  .footer-bottom-icon {
+    position: static;
+    transform: none;
+    margin-bottom: 0.5rem;
   }
   .mobile-menu a {
     font-size: 1.3rem;
