@@ -2109,21 +2109,52 @@ img {
 .hero-scroll {
     display: none;
   }
+  .footer {
+    background: #f8f5f0;
+    color: #333;
+  }
   .footer-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
   }
   .footer-brand {
-    order: 99;
+    order: 0;
+    grid-column: 1 / -1;
   }
-  .footer-col:first-child {
+  .footer-brand-logo .footer-logo-name {
+    color: #0a0a1a;
+  }
+  .footer-brand p {
+    color: #555;
+  }
+  .footer-grid > div:nth-child(2) {
     order: 1;
   }
-  .footer-col:nth-child(2) {
+  .footer-grid > div:nth-child(3) {
     order: 2;
   }
-  .footer-col:last-child {
+  .footer-col h4 {
+    color: #0a0a1a;
+  }
+  .footer-col ul li a {
+    color: #555;
+  }
+  .footer-grid > div:nth-child(4) {
     order: 3;
     grid-column: 1 / -1;
+    text-align: center;
+  }
+  .footer-grid > div:nth-child(4) h4 {
+    text-align: center;
+  }
+  .footer-contact-item {
+    color: #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-contact-item div {
     text-align: center;
   }
   .hero-pagination {
@@ -2291,8 +2322,8 @@ img {
   }
   .footer {
     padding: 40px 0 0;
-    background: #0a0a1a;
-    color: rgba(255,255,255,0.7);
+    background: #f8f5f0;
+    color: #333;
   }
   .footer-col h4 {
     font-size: 0.8rem;
@@ -2562,8 +2593,8 @@ img {
   }
   .footer {
     padding: 30px 0 0;
-    background: #0a0a1a;
-    color: rgba(255,255,255,0.7);
+    background: #f8f5f0;
+    color: #333;
   }
   .footer-col {
     margin-bottom: 0;
