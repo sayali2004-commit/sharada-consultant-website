@@ -649,11 +649,11 @@ img {
 .counter-item:not(:last-child)::after {
   content: '';
   position: absolute;
-  right: 0;
+  right: 0.5rem;
   top: 50%;
   transform: translateY(-50%);
   width: 1px;
-  height: 50px;
+  height: 40px;
   background: var(--border-color);
 }
 
@@ -664,13 +664,12 @@ img {
   color: var(--rich-gold);
   line-height: 1;
   display: inline;
+  margin-right: 0.5rem;
 }
 
+/* Remove separate counter-plus - use suffix from counter-num instead */
 .counter-plus {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  font-weight: 700;
-  color: var(--rich-gold);
+  display: none;
 }
 
 .counter-label {
