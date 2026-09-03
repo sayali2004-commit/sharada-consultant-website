@@ -91,11 +91,7 @@ img {
 }
 
 .gold-line {
-  width: 80px;
-  height: 3px;
-  background: linear-gradient(90deg, var(--rich-gold), var(--gold-light));
-  margin: 1.5rem 0;
-  border-radius: 2px;
+  display: none;
 }
 
 /* ===== PRELOADER ===== */
@@ -488,10 +484,7 @@ img {
 }
 
 .hero-line {
-  width: 60px;
-  height: 3px;
-  background: var(--rich-gold);
-  margin: 1.5rem 0;
+  display: none;
 }
 
 .hero-desc {
