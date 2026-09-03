@@ -2010,7 +2010,7 @@ img {
   .mission-grid,
   .about-grid,
   .contact-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 3rem;
   }
   .vision-img img,
@@ -2023,13 +2023,13 @@ img {
     grid-template-columns: repeat(2, 1fr);
   }
   .testimonials-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   .values-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .service-detail {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
   }
   .service-detail.reverse .service-detail-img {
@@ -2041,9 +2041,31 @@ img {
   .gallery-masonry {
     columns: 2;
   }
+  .footer {
+    background: #0a0a1a;
+    color: rgba(255,255,255,0.7);
+  }
   .footer-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
+  }
+  .footer-brand-logo .footer-logo-name {
+    color: #fff;
+  }
+  .footer-brand p {
+    color: rgba(255,255,255,0.6);
+  }
+  .footer-col h4 {
+    color: #fff;
+  }
+  .footer-col ul li a {
+    color: rgba(255,255,255,0.6);
+  }
+  .footer-col ul li a:hover {
+    color: var(--rich-gold);
+  }
+  .footer-contact-item {
+    color: rgba(255,255,255,0.6);
   }
   .footer-bottom {
     flex-direction: column;
@@ -2084,8 +2106,25 @@ img {
     width: 100%;
     justify-content: center;
   }
-  .hero-scroll {
+.hero-scroll {
     display: none;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-brand {
+    order: 99;
+  }
+  .footer-col:first-child {
+    order: 1;
+  }
+  .footer-col:nth-child(2) {
+    order: 2;
+  }
+  .footer-col:last-child {
+    order: 3;
+    grid-column: 1 / -1;
+    text-align: center;
   }
   .hero-pagination {
     bottom: 20px;
@@ -2108,11 +2147,11 @@ img {
   }
   .projects-grid,
   .projects-page-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
   }
   .activities-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
   }
   .project-card-img,
@@ -2178,11 +2217,11 @@ img {
     font-size: 0.95rem;
   }
   .about-features {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
   .values-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
   }
   .value-card {
@@ -2230,7 +2269,7 @@ img {
     padding: 2rem 1.5rem;
   }
   .form-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   .filter-buttons {
     gap: 0.5rem;
@@ -2252,6 +2291,8 @@ img {
   }
   .footer {
     padding: 40px 0 0;
+    background: #0a0a1a;
+    color: rgba(255,255,255,0.7);
   }
   .footer-col h4 {
     font-size: 0.8rem;
@@ -2521,6 +2562,8 @@ img {
   }
   .footer {
     padding: 30px 0 0;
+    background: #0a0a1a;
+    color: rgba(255,255,255,0.7);
   }
   .footer-col {
     margin-bottom: 0;
@@ -2686,3 +2729,4 @@ img {
     margin-bottom: 1rem;
   }
 }
+
