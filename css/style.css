@@ -1124,7 +1124,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  min-height: 520px;
+  min-height: 540px;
   z-index: 2;
 }
 
@@ -1133,22 +1133,42 @@ img {
   flex: 1;
   display: grid;
   grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
-  align-items: center;
-  justify-items: center;
-  padding: 0 0.5rem;
   min-width: 200px;
+  padding: 0 0.5rem;
 }
 
+/* TOP CARDS (2005, 2015, 2025): Card and circle are ABOVE the line */
 .tl-card.top .tl-card-box {
   grid-row: 1;
+  grid-column: 1;
   align-self: end;
-  margin-bottom: 36px;
+  justify-self: center;
+  margin-bottom: 74px;
+}
+
+.tl-card.top .tl-year-badge {
+  grid-row: 1;
+  grid-column: 1;
+  align-self: end;
+  justify-self: center;
+  margin-bottom: 16px;
+}
+
+/* BOTTOM CARDS (2010, 2020): Circle and card are BELOW the line */
+.tl-card.bottom .tl-year-badge {
+  grid-row: 2;
+  grid-column: 1;
+  align-self: start;
+  justify-self: center;
+  margin-top: 16px;
 }
 
 .tl-card.bottom .tl-card-box {
   grid-row: 2;
+  grid-column: 1;
   align-self: start;
-  margin-top: 36px;
+  justify-self: center;
+  margin-top: 74px;
 }
 
 .tl-card-box {
@@ -1209,6 +1229,7 @@ img {
   z-index: 2;
 }
 
+/* Top card arrow points down toward its year circle */
 .tl-card.top .tl-card-box::after {
   bottom: -7px;
   transform: translateX(-50%) rotate(45deg);
@@ -1221,6 +1242,7 @@ img {
   border-bottom-color: var(--rich-gold);
 }
 
+/* Bottom card arrow points up toward its year circle */
 .tl-card.bottom .tl-card-box::after {
   top: -7px;
   transform: translateX(-50%) rotate(45deg);
@@ -1233,14 +1255,10 @@ img {
   border-top-color: var(--rich-gold);
 }
 
-/* Year badge centered on timeline track */
+/* Year badge circles */
 .tl-year-badge {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
   background: var(--rich-gold);
   border-radius: 50%;
   display: flex;
@@ -1248,21 +1266,21 @@ img {
   justify-content: center;
   border: 3px solid #fff;
   box-shadow: 0 0 0 3px var(--rich-gold), 0 4px 12px rgba(0, 0, 0, 0.12);
-  z-index: 5;
+  z-index: 3;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
 
 .tl-year-badge span {
   font-family: 'Playfair Display', serif;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: #fff;
   letter-spacing: 0.5px;
 }
 
 .tl-card:hover .tl-year-badge {
-  transform: translate(-50%, -50%) scale(1.12);
+  transform: scale(1.12);
   box-shadow: 0 0 0 4px var(--rich-gold), 0 6px 18px rgba(184, 145, 80, 0.4);
 }
 
