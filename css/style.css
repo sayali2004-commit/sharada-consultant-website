@@ -1284,15 +1284,9 @@ img {
   box-shadow: 0 0 0 4px var(--rich-gold), 0 6px 18px rgba(184, 145, 80, 0.4);
 }
 
-/* Timeline scroll hint */
+/* Timeline scroll hint - hidden */
 .timeline-horizontal::after {
-  content: 'Scroll to see more';
-  display: block;
-  text-align: center;
-  font-size: 0.75rem;
-  color: var(--text-secondary);
-  margin-top: 1rem;
-  opacity: 0.6;
+  display: none;
 }
 
 /* ===== PROJECTS PAGE ===== */
@@ -1762,11 +1756,7 @@ img {
 }
 
 .footer-brand .footer-logo-line {
-  display: block;
-  width: 40px;
-  height: 2px;
-  background: var(--rich-gold);
-  margin-top: 12px;
+  display: none;
 }
 
 .footer-brand p {
@@ -1811,16 +1801,11 @@ img {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .footer-col h4::after {
-  content: '';
-  display: block;
-  width: 30px;
-  height: 2px;
-  background: var(--rich-gold);
-  margin-top: 8px;
+  display: none;
 }
 
 .footer-col ul {
