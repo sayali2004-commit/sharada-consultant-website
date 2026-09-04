@@ -3395,7 +3395,7 @@ img {
   .service-detail .btn {
     order: 5;
     margin-top: 0 !important;
-    align-self: flex-start;
+    align-self: center;
   }
 }
 
