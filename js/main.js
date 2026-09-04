@@ -157,7 +157,8 @@ const projectCards = document.querySelectorAll('.project-card, .project-page-car
 
 function applyFilter(filter) {
   projectCards.forEach(card => {
-    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+    const categories = (card.getAttribute('data-category') || '').split(' ');
+    if (filter === 'all' || categories.includes(filter)) {
       card.style.display = '';
       setTimeout(() => card.style.opacity = '1', 50);
     } else {
