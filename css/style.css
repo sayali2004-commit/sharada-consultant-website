@@ -517,8 +517,7 @@ img {
   flex-direction: column;
   gap: 6px;
   cursor: pointer;
-  position: relative;
-  z-index: 2002;
+  z-index: 1001;
   touch-action: manipulation;
   background: none;
   border: none;
@@ -604,12 +603,6 @@ img {
 
 .mobile-menu a {
   touch-action: manipulation;
-}
-
-.mobile-menu.active .mobile-menu-close {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
 }
 
 .mobile-menu-close {
@@ -3632,11 +3625,6 @@ img {
 
   .hamburger span {
     width: 20px;
-  }
-
-  .header.transparent .hamburger.active span,
-  .header.scrolled .hamburger.active span {
-    background: var(--rich-gold);
   }
 
   .mobile-menu a {
