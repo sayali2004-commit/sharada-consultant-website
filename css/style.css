@@ -992,7 +992,7 @@ img {
 .vision-img img,
 .mission-img img {
   width: 100%;
-  height: 260px;
+  height: 300px;
   object-fit: cover;
   border-radius: 999px 999px var(--radius-lg) var(--radius-lg);
 }
@@ -1370,8 +1370,8 @@ img {
 .about-image {
   width: 100%;
   height: auto;
-  min-height: 220px;
-  max-height: 320px;
+  min-height: 260px;
+  max-height: 420px;
   object-fit: cover;
   border-radius: var(--radius-lg);
 }
@@ -1944,7 +1944,7 @@ img {
 
 .service-detail-img {
   width: 100%;
-  height: 240px;
+  height: 280px;
   object-fit: cover;
   border-radius: var(--radius-lg);
 }
@@ -2814,7 +2814,7 @@ img {
   }
   .vision-img img,
   .mission-img img {
-    height: 280px;
+    height: 300px;
   }
   .vision-img::after,
   .mission-img::after {
@@ -2828,8 +2828,8 @@ img {
     gap: 2rem;
   }
   .about-image {
-    min-height: 220px;
-    max-height: 320px;
+    min-height: 260px;
+    max-height: 400px;
   }
   .about-content p {
     font-size: 0.95rem;
@@ -2851,7 +2851,7 @@ img {
     gap: 2rem;
   }
   .service-detail-img {
-    height: 250px;
+    height: 280px;
   }
   .service-detail-content h3 {
     font-size: clamp(1.3rem, 4vw, 1.6rem);
@@ -3014,7 +3014,7 @@ img {
   }
   .vision-img img,
   .mission-img img {
-    height: 220px;
+    height: 260px;
   }
   .vision-content .section-title,
   .mission-content .section-title {
@@ -3026,8 +3026,8 @@ img {
     line-height: 1.8;
   }
   .about-image {
-    min-height: 200px;
-    max-height: 280px;
+    min-height: 240px;
+    max-height: 360px;
   }
   .about-content p {
     font-size: 0.88rem;
@@ -3090,7 +3090,7 @@ img {
     padding: 2.5rem 0;
   }
   .service-detail-img {
-    height: 220px;
+    height: 250px;
   }
   .service-detail-content h3 {
     font-size: 1.2rem;
