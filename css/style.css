@@ -1491,14 +1491,14 @@ img {
 .tl-track {
   min-width: 0;
   position: relative;
-  padding: 0 0 0 8px;
+  padding: 0 0 0 14px;
 }
 
 .tl-track-line {
   position: absolute;
   top: 8px;
   bottom: 8px;
-  left: 31px;
+  left: 36px;
   width: 3px;
   background: repeating-linear-gradient(
     180deg,
