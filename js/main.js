@@ -258,6 +258,26 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
+// ===== MEDIA TABS (IMAGES / VIDEOS) =====
+const mediaTabBtns = document.querySelectorAll('.media-tab-btn');
+const mediaGrid = document.querySelector('.activities-grid');
+const mediaEmpty = document.querySelector('.media-empty');
+if (mediaTabBtns.length > 0) {
+  mediaTabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const mode = btn.getAttribute('data-media');
+      if (mediaGrid) mediaGrid.style.display = mode === 'images' ? '' : 'none';
+      if (mediaEmpty) {
+        if (mode === 'videos') {
+          mediaEmpty.removeAttribute('hidden');
+        } else {
+          mediaEmpty.setAttribute('hidden', '');
+        }
+      }
+    });
+  });
+}
+
 // ===== PROJECT IMAGE FULLSCREEN =====
 document.querySelectorAll('.project-page-img, .project-card-img').forEach((img) => {
   img.addEventListener('click', () => {
