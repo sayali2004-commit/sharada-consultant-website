@@ -3253,6 +3253,80 @@ img {
   }
 }
 
+/* ===== MOBILE CONTENT ORDER: label > heading > image > text > button (phones only) ===== */
+@media (max-width: 767px) {
+  .vision-grid,
+  .mission-grid,
+  .about-grid,
+  .service-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .vision-grid > div,
+  .mission-grid > div,
+  .about-grid > div,
+  .service-detail > div,
+  .vision-img,
+  .mission-img,
+  .vision-content,
+  .mission-content,
+  .about-content,
+  .service-detail-content {
+    display: contents;
+  }
+
+  .vision-grid .section-subtitle,
+  .mission-grid .section-subtitle,
+  .about-grid .section-subtitle,
+  .service-detail .section-subtitle {
+    order: 1;
+    margin-bottom: 0;
+  }
+
+  .vision-grid .section-title,
+  .mission-grid .section-title,
+  .about-grid .section-title,
+  .service-detail h3 {
+    order: 2;
+    margin-bottom: 0;
+  }
+
+  .vision-grid .vision-img img,
+  .mission-grid .mission-img img,
+  .about-grid .about-image,
+  .service-detail .service-detail-img {
+    order: 3;
+    width: 100%;
+  }
+
+  .service-detail.reverse .service-detail-img {
+    order: 3;
+  }
+
+  .vision-grid p,
+  .mission-grid p,
+  .about-grid .about-content p {
+    order: 4;
+    margin-bottom: 0;
+  }
+
+  .service-detail p,
+  .service-detail ul {
+    order: 4;
+  }
+
+  .vision-grid .btn,
+  .mission-grid .btn,
+  .about-grid .btn,
+  .service-detail .btn {
+    order: 5;
+    margin-top: 0 !important;
+    align-self: flex-start;
+  }
+}
+
 /* ===== LARGE DESKTOP: 1920px+ ===== */
 @media (min-width: 1920px) {
   html {
