@@ -517,7 +517,9 @@ img {
   flex-direction: column;
   gap: 6px;
   cursor: pointer;
-  z-index: 1001;
+  position: relative;
+  z-index: 2002;
+  touch-action: manipulation;
   background: none;
   border: none;
   padding: 10px;
@@ -600,8 +602,19 @@ img {
   color: var(--rich-gold);
 }
 
+.mobile-menu a {
+  touch-action: manipulation;
+}
+
+.mobile-menu.active .mobile-menu-close {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .mobile-menu-close {
   position: absolute;
+  touch-action: manipulation;
   top: 16px;
   right: 18px;
   width: 44px;
@@ -3619,6 +3632,11 @@ img {
 
   .hamburger span {
     width: 20px;
+  }
+
+  .header.transparent .hamburger.active span,
+  .header.scrolled .hamburger.active span {
+    background: var(--rich-gold);
   }
 
   .mobile-menu a {
