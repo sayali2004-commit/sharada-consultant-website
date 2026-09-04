@@ -2859,7 +2859,7 @@ img {
     gap: 2rem;
   }
   .service-detail-img {
-    height: 280px;
+    height: auto;
   }
   .service-detail-content h3 {
     font-size: clamp(1.3rem, 4vw, 1.6rem);
@@ -3098,7 +3098,7 @@ img {
     padding: 2.5rem 0;
   }
   .service-detail-img {
-    height: 250px;
+    height: auto;
   }
   .service-detail-content h3 {
     font-size: 1.2rem;
