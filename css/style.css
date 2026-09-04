@@ -2352,16 +2352,17 @@ img {
 .footer-grid > div:nth-child(4) .footer-contact-item {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.75rem;
-  text-align: left;
+  text-align: center;
   width: 100%;
-  max-width: 250px;
+  max-width: 290px;
   margin: 0 auto 1rem;
 }
 
 .footer-grid > div:nth-child(4) .footer-contact-icon {
-  flex: 0 0 24px;
   margin-top: 0;
+  flex-shrink: 0;
 }
 
 @media (min-width: 1024px) {
