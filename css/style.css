@@ -2436,12 +2436,9 @@ img {
   display: none;
 }
 
-.footer-grid > div:nth-child(2) {
-  order: 3;
-}
-
+.footer-grid > div:nth-child(2),
 .footer-grid > div:nth-child(3) {
-  order: 4;
+  display: none;
 }
 
 .footer-grid > div:nth-child(4) {
@@ -2509,7 +2506,11 @@ img {
   }
 
   .footer-grid > div:nth-child(2),
-  .footer-grid > div:nth-child(3),
+  .footer-grid > div:nth-child(3) {
+    display: block;
+    order: 0;
+  }
+
   .footer-grid > div:nth-child(4) {
     order: 0;
   }
