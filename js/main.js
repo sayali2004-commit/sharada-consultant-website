@@ -23,7 +23,7 @@ function updateHeader() {
   }
 }
 
-window.addEventListener('scroll', updateHeader);
+window.addEventListener('scroll', updateHeader, { passive: true });
 updateHeader();
 
 // ===== SCROLL TO TOP =====
@@ -112,7 +112,7 @@ const revealObserver = new IntersectionObserver((entries) => {
       entry.target.classList.add('revealed');
     }
   });
-}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+}, { threshold: 0.1, rootMargin: '0px 0px 200px 0px' });
 
 revealElements.forEach(el => revealObserver.observe(el));
 
@@ -139,7 +139,7 @@ const counterObserver = new IntersectionObserver((entries) => {
       counterObserver.unobserve(target);
     }
   });
-}, { threshold: 0.5 });
+}, { threshold: 0.3, rootMargin: '0px 0px 100px 0px' });
 
 counters.forEach(c => counterObserver.observe(c));
 
