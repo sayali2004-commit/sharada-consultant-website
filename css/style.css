@@ -2418,7 +2418,7 @@ img {
 
 .footer-grid .footer-brand {
   display: block;
-  order: 4;
+  order: 2;
   grid-column: 1 / -1;
 }
 
@@ -2436,12 +2436,16 @@ img {
   display: none;
 }
 
-.footer-grid > div:nth-child(2),
+.footer-grid > div:nth-child(2) {
+  order: 3;
+}
+
 .footer-grid > div:nth-child(3) {
-  display: none;
+  order: 4;
 }
 
 .footer-grid > div:nth-child(4) {
+  order: 1;
   grid-column: 1 / -1;
   display: flex;
   flex-direction: column;
@@ -2505,8 +2509,9 @@ img {
   }
 
   .footer-grid > div:nth-child(2),
-  .footer-grid > div:nth-child(3) {
-    display: block;
+  .footer-grid > div:nth-child(3),
+  .footer-grid > div:nth-child(4) {
+    order: 0;
   }
 
   .footer-grid > div:nth-child(4) {
