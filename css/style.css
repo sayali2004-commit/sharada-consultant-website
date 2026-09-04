@@ -1089,8 +1089,9 @@ img {
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-premium);
+  border-color: rgba(201, 168, 76, 0.55);
 }
 
 .project-card-img-wrapper {
@@ -1105,7 +1106,7 @@ img {
 }
 
 .project-card:hover .project-card-img {
-  transform: scale(1.05);
+  transform: scale(1.07);
 }
 
 .project-card-ribbon {
@@ -1123,32 +1124,44 @@ img {
 }
 
 .project-card-ribbon.ribbon-ongoing,
-.project-page-tag.ribbon-ongoing {
-  top: 12px;
-  left: 12px;
+.project-page-tag.ribbon-ongoing,
+.project-card-ribbon.ribbon-completed,
+.project-page-tag.ribbon-completed {
+  top: 14px;
+  left: 14px;
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  white-space: nowrap;
-  background: var(--rich-gold);
-  border: 1px solid var(--gold-dark);
-  border-radius: 999px;
-  color: var(--deep-navy);
-  padding: 6px 14px 6px 12px;
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  box-shadow: 0 4px 14px rgba(10, 10, 26, 0.25);
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  font-size: 0;
+  letter-spacing: 0;
+  border-radius: 50%;
+  background: rgba(10, 10, 26, 0.55);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border: 1.5px solid var(--rich-gold);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
 }
 
 .project-card-ribbon.ribbon-ongoing::before,
 .project-page-tag.ribbon-ongoing::before {
   content: '';
-  width: 7px;
-  height: 7px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background: var(--deep-navy);
+  background: var(--rich-gold);
+  flex-shrink: 0;
+}
+
+.project-card-ribbon.ribbon-completed::before,
+.project-page-tag.ribbon-completed::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent-green);
   flex-shrink: 0;
 }
 
@@ -1844,8 +1857,9 @@ img {
 }
 
 .project-page-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-premium);
+  border-color: rgba(201, 168, 76, 0.55);
 }
 
 .project-page-img-wrapper {
@@ -1860,7 +1874,7 @@ img {
 }
 
 .project-page-card:hover .project-page-img {
-  transform: scale(1.05);
+  transform: scale(1.07);
 }
 
 .project-page-tag {
