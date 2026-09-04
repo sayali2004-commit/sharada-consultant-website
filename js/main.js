@@ -1,11 +1,16 @@
 // ===== PRELOADER =====
-window.addEventListener('load', () => {
+// Never block first paint on slow/mobile networks: hide on DOM ready,
+// re-confirm on full load, and force-hide after 4s no matter what.
+function hidePreloader() {
   const preloader = document.getElementById('preloader');
-  if (preloader) {
-    setTimeout(() => preloader.classList.add('loaded'), 800);
-    setTimeout(() => preloader.style.display = 'none', 1400);
+  if (preloader && !preloader.classList.contains('loaded')) {
+    preloader.classList.add('loaded');
+    setTimeout(() => { preloader.style.display = 'none'; }, 700);
   }
-});
+}
+document.addEventListener('DOMContentLoaded', () => setTimeout(hidePreloader, 400));
+window.addEventListener('load', () => setTimeout(hidePreloader, 400));
+setTimeout(hidePreloader, 4000);
 
 // ===== HEADER SCROLL =====
 const header = document.querySelector('.header');
@@ -253,12 +258,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// ===== PARALLAX =====
+// ===== PARALLAX (rAF-throttled for smooth mobile scrolling) =====
+let parallaxTicking = false;
 window.addEventListener('scroll', () => {
-  const scrolled = window.scrollY;
-  document.querySelectorAll('.hero-slide-bg').forEach((bg, i) => {
-    if (slides[i] && slides[i].classList.contains('active')) {
-      bg.style.transform = `translateY(${scrolled * 0.2}px)`;
-    }
+  if (parallaxTicking) return;
+  parallaxTicking = true;
+  requestAnimationFrame(() => {
+    const scrolled = window.scrollY;
+    document.querySelectorAll('.hero-slide-bg').forEach((bg, i) => {
+      if (slides[i] && slides[i].classList.contains('active')) {
+        bg.style.transform = `translateY(${scrolled * 0.2}px)`;
+      }
+    });
+    parallaxTicking = false;
   });
-});
+}, { passive: true });
