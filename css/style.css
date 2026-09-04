@@ -1865,8 +1865,9 @@ img {
 
 .project-page-img {
   width: 100%;
-  height: 260px;
+  height: 340px;
   object-fit: cover;
+  object-position: center;
   transition: transform 0.6s;
 }
 
@@ -2788,7 +2789,7 @@ img {
     height: 260px;
   }
   .project-page-img {
-    height: 220px;
+    height: 260px;
   }
   .activity-card-img {
     height: 200px;
@@ -3058,7 +3059,7 @@ img {
     height: 230px;
   }
   .project-page-img {
-    height: 200px;
+    height: 230px;
   }
   .project-card-info {
     padding: 1rem 1.25rem;
