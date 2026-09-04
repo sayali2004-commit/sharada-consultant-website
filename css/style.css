@@ -3449,6 +3449,20 @@ img {
   }
 }
 
+/* ===== MOBILE SCROLL SMOOTHNESS (phones only) ===== */
+@media (max-width: 767px) {
+  .reveal,
+  .reveal-left,
+  .reveal-right {
+    transform: none;
+  }
+
+  .gallery-item {
+    content-visibility: auto;
+    contain-intrinsic-size: 320px;
+  }
+}
+
 /* ===== LARGE DESKTOP: 1920px+ ===== */
 @media (min-width: 1920px) {
   html {
