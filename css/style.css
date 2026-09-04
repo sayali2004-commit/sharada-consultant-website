@@ -1130,18 +1130,16 @@ img {
   align-items: center;
   gap: 7px;
   white-space: nowrap;
-  background: rgba(250, 248, 244, 0.85);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
-  border: 1px solid var(--rich-gold);
+  background: var(--rich-gold);
+  border: 1px solid var(--gold-dark);
   border-radius: 999px;
-  color: var(--gold-dark);
+  color: var(--deep-navy);
   padding: 6px 14px 6px 12px;
   font-size: 0.62rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  box-shadow: 0 4px 14px rgba(10, 10, 26, 0.12);
+  box-shadow: 0 4px 14px rgba(10, 10, 26, 0.25);
 }
 
 .project-card-ribbon.ribbon-ongoing::before,
@@ -1150,7 +1148,7 @@ img {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--rich-gold);
+  background: var(--deep-navy);
   flex-shrink: 0;
 }
 
