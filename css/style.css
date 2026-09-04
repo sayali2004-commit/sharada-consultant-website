@@ -2787,13 +2787,13 @@ img {
     font-size: 0.78rem;
   }
   .project-card-img {
-    height: 260px;
+    height: auto;
   }
   .project-page-img {
-    height: 260px;
+    height: auto;
   }
   .activity-card-img {
-    height: 240px;
+    height: auto;
   }
   .page-hero {
     height: 50vh;
@@ -3057,10 +3057,10 @@ img {
     font-size: 0.82rem;
   }
   .project-card-img {
-    height: 230px;
+    height: auto;
   }
   .project-page-img {
-    height: 230px;
+    height: auto;
   }
   .project-card-info {
     padding: 1rem 1.25rem;
@@ -3078,7 +3078,7 @@ img {
     font-size: 0.8rem;
   }
   .activity-card-img {
-    height: 210px;
+    height: auto;
   }
   .activity-card-info {
     padding: 1.25rem;
