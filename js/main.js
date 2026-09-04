@@ -158,6 +158,12 @@ const projectCards = document.querySelectorAll('.project-card, .project-page-car
 function applyFilter(filter) {
   projectCards.forEach(card => {
     const categories = (card.getAttribute('data-category') || '').split(' ');
+    const cardImg = card.querySelector('img');
+    if (filter === 'highlight' && cardImg && cardImg.getAttribute('alt') === 'Titan Apartment') {
+      card.style.order = '-1';
+    } else {
+      card.style.order = '';
+    }
     if (filter === 'all' || categories.includes(filter)) {
       card.style.display = '';
       setTimeout(() => card.style.opacity = '1', 50);
