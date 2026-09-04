@@ -1444,11 +1444,15 @@ img {
 
 .value-card {
   padding: 1.75rem 1.25rem;
-  background: var(--bg-cream);
+  background: linear-gradient(180deg, #ffffff 0%, var(--bg-cream) 100%);
   text-align: center;
   transition: all 0.4s;
-  border-bottom: 3px solid transparent;
-  border-radius: var(--radius-md);
+  border: 1px solid rgba(201, 168, 76, 0.28);
+  border-bottom: 3px solid var(--rich-gold);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 24px rgba(10, 10, 26, 0.05);
+  position: relative;
+  overflow: hidden;
 }
 
 @media (min-width: 1024px) {
@@ -1458,18 +1462,31 @@ img {
 }
 
 .value-card:hover {
-  border-bottom-color: var(--rich-gold);
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+  border-color: rgba(201, 168, 76, 0.55);
+  border-bottom-color: var(--gold-dark);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-premium);
+}
+
+.value-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 64px;
+  height: 3px;
+  background: var(--gold-gradient);
+  border-radius: 0 0 4px 4px;
 }
 
 .value-num {
   font-family: 'Marcellus', serif;
   font-size: 3rem;
   font-weight: 400;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
   color: var(--rich-gold);
-  opacity: 0.3;
+  opacity: 0.55;
   margin-bottom: 1rem;
 }
 
