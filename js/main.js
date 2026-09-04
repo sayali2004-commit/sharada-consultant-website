@@ -251,6 +251,18 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
+// ===== PROJECT IMAGE FULLSCREEN =====
+document.querySelectorAll('.project-page-img, .project-card-img').forEach((img) => {
+  img.addEventListener('click', () => {
+    galleryImages = [];
+    document.querySelectorAll('.project-page-img, .project-card-img').forEach(im => {
+      galleryImages.push(im.src);
+    });
+    currentGalleryIndex = Math.max(0, galleryImages.indexOf(img.src));
+    openLightbox(img.src);
+  });
+});
+
 // ===== SMOOTH SCROLL =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {

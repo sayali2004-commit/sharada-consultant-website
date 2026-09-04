@@ -1871,6 +1871,11 @@ img {
   transition: transform 0.6s;
 }
 
+.project-card-img,
+.project-page-img {
+  cursor: zoom-in;
+}
+
 .project-page-card:hover .project-page-img {
   transform: scale(1.07);
 }
