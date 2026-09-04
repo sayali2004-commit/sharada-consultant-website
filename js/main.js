@@ -279,6 +279,19 @@ if (mediaTabBtns.length > 0) {
   });
 }
 
+// ===== VIDEO PLAY OVERLAYS =====
+document.querySelectorAll('.video-frame').forEach(frame => {
+  const video = frame.querySelector('video');
+  const btn = frame.querySelector('.video-play-btn');
+  if (!video || !btn) return;
+  btn.addEventListener('click', () => {
+    const attempt = video.play();
+    if (attempt) attempt.catch(() => {});
+  });
+  video.addEventListener('play', () => frame.classList.add('playing'));
+  video.addEventListener('pause', () => frame.classList.remove('playing'));
+});
+
 // ===== PROJECT IMAGE FULLSCREEN =====
 document.querySelectorAll('.project-page-img, .project-card-img').forEach((img) => {
   img.addEventListener('click', () => {
