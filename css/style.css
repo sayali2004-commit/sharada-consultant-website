@@ -2309,7 +2309,9 @@ img {
 .footer-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  column-gap: 1.5rem;
+  row-gap: 2rem;
+  align-items: start;
   padding: 0 4px 2.5rem;
   border-bottom: none;
   max-width: 430px;
