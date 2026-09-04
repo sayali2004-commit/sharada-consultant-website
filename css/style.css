@@ -3167,12 +3167,23 @@ img {
   }
   .footer-bottom {
     width: 100%;
-    padding: 2rem 20px 1.5rem;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+    padding: 2rem 20px calc(2.5rem + env(safe-area-inset-bottom, 0px));
     font-size: 0.72rem;
     flex-direction: column;
     gap: 0.4rem;
     text-align: center;
     position: relative;
+  }
+  .footer-grid {
+    height: auto;
+    overflow: visible;
+  }
+  .footer-social a,
+  .footer-bottom-icon {
+    flex-shrink: 0;
   }
   .footer-bottom-icon {
     position: absolute;
