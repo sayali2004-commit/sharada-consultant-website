@@ -2634,6 +2634,10 @@ img {
   border-radius: 28px 28px 0 0;
 }
 
+.cta-section.cta-flat {
+  border-radius: 0;
+}
+
 @media (min-width: 1024px) {
   .cta-section {
     padding: 80px 0;
