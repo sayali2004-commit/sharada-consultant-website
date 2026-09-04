@@ -992,7 +992,7 @@ img {
 .vision-img img,
 .mission-img img {
   width: 100%;
-  height: 300px;
+  height: 340px;
   object-fit: cover;
   border-radius: 999px 999px var(--radius-lg) var(--radius-lg);
 }
@@ -1005,7 +1005,7 @@ img {
 @media (min-width: 768px) {
   .vision-img img,
   .mission-img img {
-    height: 340px;
+    height: 400px;
   }
 }
 
@@ -1018,7 +1018,7 @@ img {
 
   .vision-img img,
   .mission-img img {
-    height: 450px;
+    height: 520px;
   }
 }
 
@@ -2163,8 +2163,9 @@ img {
 
 .activity-card-img {
   width: 100%;
-  height: 240px;
+  height: 300px;
   object-fit: cover;
+  object-position: center;
   transition: transform 0.5s;
 }
 
@@ -2792,7 +2793,7 @@ img {
     height: 260px;
   }
   .activity-card-img {
-    height: 200px;
+    height: 240px;
   }
   .page-hero {
     height: 50vh;
@@ -2816,7 +2817,7 @@ img {
   }
   .vision-img img,
   .mission-img img {
-    height: 300px;
+    height: 340px;
   }
   .vision-img::after,
   .mission-img::after {
@@ -3016,7 +3017,7 @@ img {
   }
   .vision-img img,
   .mission-img img {
-    height: 260px;
+    height: 300px;
   }
   .vision-content .section-title,
   .mission-content .section-title {
@@ -3077,7 +3078,7 @@ img {
     font-size: 0.8rem;
   }
   .activity-card-img {
-    height: 180px;
+    height: 210px;
   }
   .activity-card-info {
     padding: 1.25rem;
