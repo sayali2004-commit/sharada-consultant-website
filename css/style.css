@@ -1370,16 +1370,16 @@ img {
 .about-image {
   width: 100%;
   height: auto;
-  min-height: 260px;
-  max-height: 420px;
-  object-fit: cover;
+  min-height: 0;
+  max-height: none;
+  object-fit: contain;
   border-radius: var(--radius-lg);
 }
 
 @media (min-width: 1024px) {
   .about-image {
-    min-height: 300px;
-    max-height: 500px;
+    min-height: 0;
+    max-height: none;
   }
 }
 
@@ -2829,8 +2829,8 @@ img {
     gap: 2rem;
   }
   .about-image {
-    min-height: 260px;
-    max-height: 400px;
+    min-height: 0;
+    max-height: none;
   }
   .about-content p {
     font-size: 0.95rem;
@@ -3027,8 +3027,8 @@ img {
     line-height: 1.8;
   }
   .about-image {
-    min-height: 240px;
-    max-height: 360px;
+    min-height: 0;
+    max-height: none;
   }
   .about-content p {
     font-size: 0.88rem;
