@@ -946,15 +946,7 @@ img {
 
 .vision-img::after,
 .mission-img::after {
-  content: '';
-  position: absolute;
-  width: 72px;
-  height: 72px;
-  border: 3px solid var(--rich-gold);
-  border-radius: 0 0 var(--radius-md) 0;
-  bottom: -12px;
-  right: -8px;
-  pointer-events: none;
+  display: none;
 }
 
 @media (min-width: 768px) {
@@ -974,14 +966,6 @@ img {
   .vision-img img,
   .mission-img img {
     height: 450px;
-  }
-
-  .vision-img::after,
-  .mission-img::after {
-    width: 100px;
-    height: 100px;
-    bottom: -20px;
-    right: -20px;
   }
 }
 
@@ -2243,7 +2227,7 @@ img {
 }
 
 .footer-grid .footer-brand {
-  grid-column: 1 / -1;
+  display: none;
 }
 
 .footer-grid > div:nth-child(4) {
@@ -2268,6 +2252,7 @@ img {
   }
 
   .footer-grid .footer-brand {
+    display: block;
     grid-column: auto;
   }
 
@@ -2668,10 +2653,7 @@ img {
   }
   .vision-img::after,
   .mission-img::after {
-    width: 60px;
-    height: 60px;
-    bottom: -10px;
-    right: -10px;
+    display: none;
   }
   .vision-content .section-title,
   .mission-content .section-title {
