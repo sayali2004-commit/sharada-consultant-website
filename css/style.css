@@ -584,6 +584,33 @@ img {
   color: var(--rich-gold);
 }
 
+.mobile-menu-close {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1.5px solid rgba(201, 168, 76, 0.5);
+  border-radius: 50%;
+  color: var(--rich-gold);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 2001;
+  font-family: 'Inter', sans-serif;
+}
+
+.mobile-menu-close:hover {
+  background: var(--rich-gold);
+  color: #0a0a1a;
+  transform: scale(1.05);
+}
+
 /* ===== HERO SLIDER ===== */
 .hero-slider {
   position: relative;

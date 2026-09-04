@@ -57,6 +57,14 @@ if (hamburger && mobileMenu) {
       document.body.style.overflow = '';
     });
   });
+  const mobileMenuClose = mobileMenu.querySelector('.mobile-menu-close');
+  if (mobileMenuClose) {
+    mobileMenuClose.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      mobileMenu.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  }
 }
 
 // ===== HERO SLIDER =====
