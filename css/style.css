@@ -690,6 +690,7 @@ img {
   inset: 0;
   z-index: 3;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .hero-video {
