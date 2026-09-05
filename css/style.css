@@ -3749,6 +3749,10 @@ img {
   }
 
   /* Hamburger morphs into X in place (same element = same position, guaranteed) */
+  .hamburger.active span {
+    width: 24px;
+  }
+
   .hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translateY(7px);
   }
