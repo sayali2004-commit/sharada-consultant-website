@@ -758,10 +758,6 @@ img {
   overflow-wrap: break-word;
 }
 
-.hero-pc-brand {
-  display: none;
-}
-
 .hero-badge {
   display: inline-block;
   max-width: 100%;
@@ -3784,50 +3780,6 @@ img {
 
   .hero-slider {
     min-height: 760px;
-  }
-}
-
-/* ===== PC HERO: split video + branding (mobile untouched) ===== */
-@media (min-width: 1024px) {
-  .hero-video-wrap {
-    left: 44%;
-    right: 0;
-    width: 56%;
-  }
-
-  .hero-video {
-    object-position: center center;
-  }
-
-  .hero-slide {
-    left: 44%;
-  }
-
-  .hero-overlay {
-    width: 44%;
-    right: auto;
-    background: #f5f1e8;
-    padding: calc(var(--header-height) + 20px) 40px 110px calc(4% + 16px);
-    align-items: center;
-  }
-
-  .hero-content {
-    max-width: 520px;
-  }
-
-  .hero-pc-brand {
-    display: block;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 0.85rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: #8a6d2b;
-    margin-bottom: 1rem;
-  }
-
-  .hero-pc-brand em {
-    font-style: italic;
-    letter-spacing: 0.12em;
   }
 }
 
