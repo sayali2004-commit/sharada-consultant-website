@@ -1008,8 +1008,19 @@ img {
 }
 
 .btn-outline-dark:hover {
-  background: var(--deep-navy);
-  color: #fff;
+  background: linear-gradient(135deg, #dfc574 0%, #c9a84c 60%, #b8943f 100%);
+  border-color: #c9a84c;
+  color: #0a0a1a;
+}
+
+/* Every button sitewide: pressed/clicked = gold gradient + dark text, never black */
+.btn:active,
+.nav-cta:active,
+.filter-btn:active,
+.video-play-btn:active {
+  background: linear-gradient(135deg, #dfc574 0%, #c9a84c 60%, #b8943f 100%) !important;
+  border-color: #c9a84c !important;
+  color: #0a0a1a !important;
 }
 
 /* ===== COUNTER SECTION ===== */
