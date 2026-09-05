@@ -109,12 +109,22 @@ if (heroSlides.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce
 // ===== HERO BACKGROUND VIDEO =====
 const heroVideo = document.querySelector('.hero-video');
 if (heroVideo) {
-  const playAttempt = heroVideo.play();
-  if (playAttempt) playAttempt.catch(() => {});
+  heroVideo.muted = true;
+  heroVideo.loop = true;
+  heroVideo.playsInline = true;
+  const playHero = () => {
+    const p = heroVideo.play();
+    if (p) p.catch(() => {});
+  };
+  playHero();
+  heroVideo.addEventListener('canplay', playHero);
+  heroVideo.addEventListener('ended', playHero);
+  heroVideo.addEventListener('pause', () => {
+    if (!document.hidden) playHero();
+  });
   document.addEventListener('visibilitychange', () => {
     if (!heroVideo.paused || document.hidden) return;
-    const retry = heroVideo.play();
-    if (retry) retry.catch(() => {});
+    playHero();
   });
 }
 
