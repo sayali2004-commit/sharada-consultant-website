@@ -106,6 +106,18 @@ if (heroSlides.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce
   });
 }
 
+// ===== HERO BACKGROUND VIDEO =====
+const heroVideo = document.querySelector('.hero-video');
+if (heroVideo) {
+  const playAttempt = heroVideo.play();
+  if (playAttempt) playAttempt.catch(() => {});
+  document.addEventListener('visibilitychange', () => {
+    if (!heroVideo.paused || document.hidden) return;
+    const retry = heroVideo.play();
+    if (retry) retry.catch(() => {});
+  });
+}
+
 // ===== SCROLL REVEAL =====
 const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
 const revealObserver = new IntersectionObserver((entries) => {
