@@ -792,6 +792,13 @@ img {
   font-weight: 500;
 }
 
+.hero-content h1 .into {
+  font-size: 0.52em;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  vertical-align: baseline;
+}
+
 .hero-line {
   display: none;
 }
@@ -832,7 +839,7 @@ img {
     transform: none;
     flex-direction: row;
     gap: 1rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
     flex-wrap: wrap;
     width: auto;
     max-width: 100%;
