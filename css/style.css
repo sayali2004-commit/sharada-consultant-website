@@ -828,13 +828,14 @@ img {
 
 @media (min-width: 768px) {
   .hero-buttons {
+    position: static;
+    transform: none;
     flex-direction: row;
     gap: 1rem;
-    margin-top: 0;
+    margin-top: 2rem;
     flex-wrap: wrap;
-    left: calc(5% + 20px);
-    transform: none;
-    bottom: 56px;
+    width: auto;
+    max-width: 100%;
   }
 
   .hero-buttons .btn {
