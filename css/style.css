@@ -3748,6 +3748,46 @@ img {
     width: 20px;
   }
 
+  /* Hamburger morphs into X in place (same element = same position, guaranteed) */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(7px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-7px);
+  }
+
+  /* Keep header above open menu so logo + morphing icon stay visible/tappable */
+  .header.menu-open {
+    z-index: 3000;
+    background: transparent;
+    box-shadow: none;
+    border-bottom: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  .header.menu-open .nav-logo-name {
+    color: #fff;
+  }
+
+  .header.menu-open .nav-logo-tagline {
+    color: var(--gold-light);
+  }
+
+  .header.menu-open .hamburger span {
+    background: #fff;
+  }
+
+  /* Separate close button removed; hamburger-X serves as the close control */
+  .mobile-menu-close {
+    display: none;
+  }
+
   .mobile-menu a {
     opacity: 0;
     transform: translateY(14px);
