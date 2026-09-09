@@ -1441,36 +1441,16 @@ img {
   overflow: hidden;
 }
 
-/* Premium architectural drafting frame: gold hairline inset + baseline */
-.page-hero::before {
-  content: '';
-  position: absolute;
-  inset: 12px;
-  border: 1px solid rgba(223, 197, 116, 0.55);
-  z-index: 3;
-  pointer-events: none;
-}
-
-.page-hero::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 5px;
-  background: linear-gradient(90deg, transparent 0%, #c9a84c 18%, #dfc574 50%, #c9a84c 82%, transparent 100%);
-  z-index: 3;
-  pointer-events: none;
+/* Seamless blend: image melts into the page, no container edge at all */
+.page-hero-bg {
+  -webkit-mask-image: linear-gradient(180deg, #000 76%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 76%, transparent 100%);
 }
 
 @media (min-width: 1024px) {
   .page-hero {
     height: 60vh;
     min-height: 400px;
-  }
-
-  .page-hero::before {
-    inset: 20px 26px;
   }
 }
 
