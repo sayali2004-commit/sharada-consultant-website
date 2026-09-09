@@ -1439,16 +1439,38 @@ img {
   justify-content: center;
   text-align: center;
   overflow: hidden;
-  /* Mobile: same architectural language, shallower simplified cut */
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 80% 97%, 62% 100%, 0 100%);
+}
+
+/* Premium architectural drafting frame: gold hairline inset + baseline */
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(223, 197, 116, 0.55);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.page-hero::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 5px;
+  background: linear-gradient(90deg, transparent 0%, #c9a84c 18%, #dfc574 50%, #c9a84c 82%, transparent 100%);
+  z-index: 3;
+  pointer-events: none;
 }
 
 @media (min-width: 1024px) {
   .page-hero {
     height: 60vh;
     min-height: 400px;
-    /* Desktop: wide frame, straight edges, subtle asymmetric slant cut along bottom */
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 84% 95%, 66% 100%, 0 100%);
+  }
+
+  .page-hero::before {
+    inset: 20px 26px;
   }
 }
 
