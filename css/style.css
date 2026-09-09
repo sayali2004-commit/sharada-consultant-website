@@ -1282,6 +1282,7 @@ img {
   object-fit: cover;
   object-position: center;
   transition: transform 0.6s;
+  filter: saturate(1.1) contrast(1.04);
 }
 
 .project-card:hover .project-card-img {
@@ -2073,6 +2074,7 @@ img {
   object-fit: cover;
   object-position: center;
   transition: transform 0.6s;
+  filter: saturate(1.1) contrast(1.04);
 }
 
 .project-card-img,
