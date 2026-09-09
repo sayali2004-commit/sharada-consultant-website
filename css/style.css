@@ -1465,6 +1465,11 @@ img {
   filter: brightness(0.9);
 }
 
+/* About hero: frame on the pavilion + courtyard activity (proper height balance) */
+.page-hero-bg img.about-hero-img {
+  object-position: center 62%;
+}
+
 .page-hero-bg::after {
   content: '';
   position: absolute;
