@@ -3988,6 +3988,11 @@ img {
     }
     .mobile-menu a { font-size: 1rem; }
   }
+
+  /* Drawer cleanup: text-only rows (no brand header, no CTA, no numbers) */
+  .md-brand,
+  .md-cta { display: none; }
+  .mobile-menu a::before { display: none; }
 }
 
 /* ===== LARGE DESKTOP: 1920px+ ===== */
