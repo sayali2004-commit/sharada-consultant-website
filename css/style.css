@@ -3849,6 +3849,7 @@ img {
   }
 
   /* Minimal text rows separated by hairlines - no button boxes */
+  .mobile-menu { counter-reset: mnav; }
   .mobile-menu a {
     position: relative;
     display: flex;
@@ -3857,6 +3858,8 @@ img {
     gap: 10px;
     width: 100%;
     padding: 10px 4px 10px 14px;
+    /* architectural index number (CSS counter, no markup change) */
+    counter-increment: mnav;
     color: rgba(242, 237, 226, 0.88);
     font-family: 'Marcellus', serif;
     font-size: 1.02rem;
@@ -3899,25 +3902,27 @@ img {
     transform: translateX(0);
   }
 
-  /* Active page: thin gold vertical line on the left */
+  /* Architectural index number on every row */
+  .mobile-menu a::before {
+    content: '0' counter(mnav);
+    flex: none;
+    width: 22px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    color: rgba(201, 168, 76, 0.6);
+  }
+  .mobile-menu a::after { margin-left: auto; }
+
+  /* Active page: thin gold line + brighter number */
   .mobile-menu a.active {
     padding-left: 19px;
     color: #fff;
+    background: linear-gradient(90deg, rgba(201, 168, 76, 0.12), transparent 80%);
+    box-shadow: inset 2px 0 0 #c9a84c;
   }
-
-  .mobile-menu a.active::before {
-    content: '';
-    position: absolute;
-    left: 2px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 2px;
-    height: 55%;
-    min-height: 18px;
-    border-radius: 999px;
-    background: var(--gold-gradient);
-    box-shadow: 0 0 8px rgba(201, 168, 76, 0.7);
-  }
+  .mobile-menu a.active::before { color: var(--gold-light); }
 
   .mobile-menu.active a {
     opacity: 1;
