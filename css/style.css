@@ -3727,11 +3727,10 @@ img {
 
 /* ===== PREMIUM MOBILE NAVBAR (1023px and below) ===== */
 @media (max-width: 1023px) {
-  /* Closed mobile navbar: fully transparent, sitting on the hero */
-  .header.transparent:not(.menu-open) {
-    background: transparent;
-    -webkit-backdrop-filter: none;
-    backdrop-filter: none;
+  .header.transparent {
+    background: linear-gradient(180deg, rgba(10, 10, 26, 0.35), transparent);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
   }
 
   .header.scrolled {
@@ -3818,9 +3817,9 @@ img {
     max-height: calc(100dvh - 16px);
     overflow-y: auto;
     padding: calc(var(--header-height, 68px) + 6px) 22px 20px;
-    background: linear-gradient(180deg, #141a36 0%, #0a0c1d 100%);
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
+    background: linear-gradient(180deg, rgba(20, 26, 52, 0.88), rgba(10, 12, 28, 0.9));
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
     border-left: 1px solid rgba(201, 168, 76, 0.35);
     border-bottom: 1px solid rgba(201, 168, 76, 0.35);
     border-radius: 0 0 0 24px;
@@ -4503,5 +4502,19 @@ strong, b { font-weight: 700; }
   font-family: var(--font-sans);
   font-size: 12px;
   font-weight: 500;
+}
+
+/* ============================================================
+   PHONE-ONLY (≤768px): transparent closed navbar.
+   Tablet and desktop are intentionally untouched.
+   ============================================================ */
+@media (max-width: 768px) {
+  .header.transparent:not(.menu-open) {
+    background: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    box-shadow: none;
+    border-bottom: none;
+  }
 }
 
