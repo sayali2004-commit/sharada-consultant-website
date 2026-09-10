@@ -3882,6 +3882,30 @@ img {
   pointer-events: none;
 }
 
+/* ===== OUR MISSION: same signature language, mirrored (image sits on the right) ===== */
+.mission-img {
+  position: relative;
+  z-index: 0;
+}
+
+.mission-img img {
+  border-radius: 30px 30px 30px 150px;
+  box-shadow: 0 30px 60px rgba(10, 10, 26, 0.18);
+  position: relative;
+  z-index: 1;
+}
+
+.mission-img::after {
+  display: block;
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1.5px solid rgba(201, 168, 76, 0.6);
+  border-radius: 30px 30px 30px 150px;
+  transform: translate(-16px, 16px);
+  pointer-events: none;
+}
+
 @media (max-width: 480px) {
   .vision-img img {
     border-radius: 22px 22px 90px 22px;
@@ -3890,6 +3914,15 @@ img {
   .vision-img::after {
     border-radius: 22px 22px 90px 22px;
     transform: translate(10px, 10px);
+  }
+
+  .mission-img img {
+    border-radius: 22px 22px 22px 90px;
+  }
+
+  .mission-img::after {
+    border-radius: 22px 22px 22px 90px;
+    transform: translate(-10px, 10px);
   }
 }
 
