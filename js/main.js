@@ -50,7 +50,9 @@ if (hamburger && mobileMenu) {
     hamburger.classList.remove('active');
     mobileMenu.classList.remove('active');
     if (siteHeader) siteHeader.classList.remove('menu-open');
+    document.body.classList.remove('menu-open');
     document.body.style.overflow = '';
+    document.documentElement.style.overflow = '';
   };
   // Mark current page so the floating panel shows the gold left indicator
   const currentPage = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
@@ -66,8 +68,10 @@ if (hamburger && mobileMenu) {
     mobileMenu.classList.toggle('active');
     const isOpen = mobileMenu.classList.contains('active');
     if (siteHeader) siteHeader.classList.toggle('menu-open', isOpen);
-    // Lock background scroll while panel is open; hero stays visible behind it
+    // Lock background scroll (body + root) while menu is open; menu itself keeps its own scroll
+    document.body.classList.toggle('menu-open', isOpen);
     document.body.style.overflow = isOpen ? 'hidden' : '';
+    document.documentElement.style.overflow = isOpen ? 'hidden' : '';
   });
   mobileMenu.addEventListener('click', (e) => e.stopPropagation());
   mobileMenu.querySelectorAll('a').forEach(link => {

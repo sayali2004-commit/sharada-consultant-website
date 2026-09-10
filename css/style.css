@@ -3727,10 +3727,11 @@ img {
 
 /* ===== PREMIUM MOBILE NAVBAR (1023px and below) ===== */
 @media (max-width: 1023px) {
-  .header.transparent {
-    background: linear-gradient(180deg, rgba(10, 10, 26, 0.35), transparent);
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
+  /* Closed mobile navbar: fully transparent, sitting on the hero */
+  .header.transparent:not(.menu-open) {
+    background: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
   }
 
   .header.scrolled {
@@ -3792,6 +3793,11 @@ img {
   /* Separate close button removed; hamburger-X serves as the close control */
   .mobile-menu-close {
     display: none;
+  }
+
+  /* Scroll-lock backup: applied via body class while the mobile menu is open */
+  body.menu-open {
+    overflow: hidden;
   }
 
   /* ===== Classic right slide-in drawer (mobile only, page stays visible left) ===== */
