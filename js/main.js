@@ -46,30 +46,41 @@ const hamburger = document.querySelector('.hamburger');
 const mobileMenu = document.querySelector('.mobile-menu');
 const siteHeader = document.querySelector('.header');
 if (hamburger && mobileMenu) {
-  hamburger.addEventListener('click', () => {
+  const closeMobileMenu = () => {
+    hamburger.classList.remove('active');
+    mobileMenu.classList.remove('active');
+    if (siteHeader) siteHeader.classList.remove('menu-open');
+  };
+  // Mark current page so the floating panel shows the gold left indicator
+  const currentPage = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    const href = (link.getAttribute('href') || '').toLowerCase();
+    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+      link.classList.add('active');
+    }
+  });
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
     hamburger.classList.toggle('active');
     mobileMenu.classList.toggle('active');
     const isOpen = mobileMenu.classList.contains('active');
     if (siteHeader) siteHeader.classList.toggle('menu-open', isOpen);
-    document.body.style.overflow = isOpen ? 'hidden' : '';
+    // No scroll-lock / no page overlay: hero stays visible behind the panel
   });
+  mobileMenu.addEventListener('click', (e) => e.stopPropagation());
   mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      mobileMenu.classList.remove('active');
-      if (siteHeader) siteHeader.classList.remove('menu-open');
-      document.body.style.overflow = '';
-    });
+    link.addEventListener('click', closeMobileMenu);
   });
   const mobileMenuClose = mobileMenu.querySelector('.mobile-menu-close');
   if (mobileMenuClose) {
-    mobileMenuClose.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      mobileMenu.classList.remove('active');
-      if (siteHeader) siteHeader.classList.remove('menu-open');
-      document.body.style.overflow = '';
-    });
+    mobileMenuClose.addEventListener('click', closeMobileMenu);
   }
+  document.addEventListener('click', (e) => {
+    if (mobileMenu.classList.contains('active')) closeMobileMenu();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileMenu.classList.contains('active')) closeMobileMenu();
+  });
 }
 
 // ===== HERO CINEMATIC SLIDER =====
