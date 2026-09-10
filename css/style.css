@@ -561,7 +561,7 @@ img {
   transform: rotate(-45deg) translate(5px, -6px);
 }
 
-/* ===== MOBILE MENU ===== */
+/* ===== MOBILE MENU - right aligned ===== */
 .mobile-menu {
   display: none;
   position: fixed;
@@ -572,9 +572,10 @@ img {
   background: rgba(10, 10, 26, 0.98);
   z-index: 2000;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
+  align-items: flex-end;
+  justify-content: flex-start;
+  text-align: right;
+  gap: 1.1rem;
   opacity: 0;
   transition: opacity 0.4s;
   pointer-events: none;
@@ -585,7 +586,7 @@ img {
   opacity: 1;
   pointer-events: auto;
   overflow-y: auto;
-  padding: 80px 20px 40px;
+  padding: 96px 30px 40px;
 }
 
 .mobile-menu a {
@@ -595,6 +596,8 @@ img {
   font-weight: 400;
   letter-spacing: 0.05em;
   transition: color 0.3s;
+  width: 100%;
+  text-align: right;
 }
 
 .mobile-menu a:hover {
@@ -1145,7 +1148,7 @@ img {
   width: 100%;
   height: 340px;
   object-fit: cover;
-  border-radius: 999px 999px var(--radius-lg) var(--radius-lg);
+  border-radius: 0;
 }
 
 .vision-img::after,
@@ -3858,51 +3861,203 @@ img {
   }
 }
 
-/* ===== OUR VISION signature shape: twin grand bottom curves + offset gold keyline ===== */
-.vision-img {
-  position: relative;
-  z-index: 0;
-}
-
-.vision-img img {
-  border-radius: 28px 28px 110px 110px;
-  box-shadow: 0 30px 60px rgba(10, 10, 26, 0.18);
-  position: relative;
-  z-index: 1;
-}
-
-.vision-img::after {
-  display: block;
-  content: '';
-  position: absolute;
-  inset: 0;
-  border: 1.5px solid rgba(201, 168, 76, 0.6);
-  border-radius: 28px 28px 110px 110px;
-  transform: translate(16px, 16px);
-  pointer-events: none;
-}
-
-/* ===== OUR MISSION: identical signature shape, keyline offset mirrored (image on right) ===== */
+/* ===== OUR VISION / MISSION: premium layered card + floating badge (mobile-safe) ===== */
+.vision-img,
 .mission-img {
   position: relative;
   z-index: 0;
+  isolation: isolate;
+  padding-top: 18px;
 }
 
-.mission-img img {
-  border-radius: 28px 28px 110px 110px;
-  box-shadow: 0 30px 60px rgba(10, 10, 26, 0.18);
-  position: relative;
-  z-index: 1;
-}
-
-.mission-img::after {
-  display: block;
+/* gold dotted accent behind card - unique premium detail, no overflow */
+.vision-img::before,
+.mission-img::before {
   content: '';
   position: absolute;
-  inset: 0;
-  border: 1.5px solid rgba(201, 168, 76, 0.6);
-  border-radius: 28px 28px 110px 110px;
-  transform: translate(-16px, 16px);
+  top: 0;
+  left: 6px;
+  width: 118px;
+  height: 62px;
+  background-image: radial-gradient(rgba(201, 168, 76, 0.85) 1.6px, transparent 1.6px);
+  background-size: 12px 12px;
+  opacity: 0.55;
+  z-index: 0;
   pointer-events: none;
+}
+
+.mission-img::before {
+  left: auto;
+  right: 6px;
+}
+
+/* main card */
+.vision-img-main {
+  position: relative;
+  z-index: 1;
+  border-radius: 22px 22px 22px 64px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(201, 168, 76, 0.38);
+  box-shadow: 0 24px 60px rgba(10, 10, 26, 0.16), 0 2px 0 rgba(201, 168, 76, 0.6) inset;
+}
+
+/* thin gold top line */
+.vision-img-main::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gold-gradient);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.vision-img-main img,
+.vision-img img,
+.mission-img img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+.vision-img::after,
+.mission-img::after {
+  display: none;
+}
+
+/* floating glass badge */
+.vision-badge {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.94);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(201, 168, 76, 0.45);
+  border-radius: 16px;
+  padding: 8px 16px 8px 8px;
+  box-shadow: 0 12px 30px rgba(10, 10, 26, 0.22);
+}
+
+.vision-badge-right {
+  left: auto;
+  right: 14px;
+}
+
+.vision-badge-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 52px;
+  height: 52px;
+  padding: 0 8px;
+  background: linear-gradient(135deg, #0a0a1a 0%, #1e1e3a 100%);
+  color: var(--gold-light);
+  font-family: 'Marcellus', serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+  border-radius: 12px;
+  border: 1px solid rgba(201, 168, 76, 0.5);
+}
+
+.vision-badge-text {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.4;
+  color: var(--deep-navy);
+}
+
+@media (min-width: 768px) {
+  .vision-img-main img,
+  .vision-img img,
+  .mission-img img {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .vision-img-main {
+    border-radius: 26px 26px 26px 88px;
+  }
+  .vision-img-main img,
+  .vision-img img,
+  .mission-img img {
+    height: 520px;
+  }
+  .vision-badge {
+    left: 20px;
+    bottom: 20px;
+    padding: 10px 20px 10px 10px;
+  }
+  .vision-badge-right {
+    left: auto;
+    right: 20px;
+  }
+  .vision-badge-num {
+    min-width: 60px;
+    height: 60px;
+    font-size: 1.45rem;
+  }
+  .vision-badge-text {
+    font-size: 0.78rem;
+  }
+}
+
+/* mobile: identical to PC card - same shape, same premium look */
+@media (max-width: 767px) {
+  .vision-grid,
+  .mission-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .vision-grid > div,
+  .mission-grid > div,
+  .vision-img,
+  .mission-img,
+  .vision-content,
+  .mission-content {
+    display: block;
+    max-width: 100%;
+  }
+  .vision-img,
+  .mission-img {
+    width: 100%;
+    padding-top: 16px;
+  }
+  .vision-img-main {
+    border-radius: 22px 22px 22px 64px;
+  }
+  .vision-grid .vision-img img,
+  .mission-grid .mission-img img,
+  .vision-img-main img {
+    order: unset;
+    width: 100%;
+    height: 340px;
+    aspect-ratio: auto;
+    min-height: 0;
+    object-fit: cover;
+  }
+  .vision-badge-num {
+    min-width: 48px;
+    height: 48px;
+    font-size: 1.15rem;
+  }
+  .vision-badge-text {
+    font-size: 0.68rem;
+  }
 }
 
