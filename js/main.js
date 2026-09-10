@@ -50,6 +50,7 @@ if (hamburger && mobileMenu) {
     hamburger.classList.remove('active');
     mobileMenu.classList.remove('active');
     if (siteHeader) siteHeader.classList.remove('menu-open');
+    document.body.style.overflow = '';
   };
   // Mark current page so the floating panel shows the gold left indicator
   const currentPage = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
@@ -65,7 +66,8 @@ if (hamburger && mobileMenu) {
     mobileMenu.classList.toggle('active');
     const isOpen = mobileMenu.classList.contains('active');
     if (siteHeader) siteHeader.classList.toggle('menu-open', isOpen);
-    // No scroll-lock / no page overlay: hero stays visible behind the panel
+    // Lock background scroll while panel is open; hero stays visible behind it
+    document.body.style.overflow = isOpen ? 'hidden' : '';
   });
   mobileMenu.addEventListener('click', (e) => e.stopPropagation());
   mobileMenu.querySelectorAll('a').forEach(link => {
