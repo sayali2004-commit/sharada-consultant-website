@@ -44,17 +44,19 @@ if (scrollTopBtn) {
 // ===== MOBILE MENU =====
 const hamburger = document.querySelector('.hamburger');
 const mobileMenu = document.querySelector('.mobile-menu');
+const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
 const siteHeader = document.querySelector('.header');
 if (hamburger && mobileMenu) {
   const closeMobileMenu = () => {
     hamburger.classList.remove('active');
     mobileMenu.classList.remove('active');
+    if (mobileMenuOverlay) mobileMenuOverlay.classList.remove('active');
     if (siteHeader) siteHeader.classList.remove('menu-open');
     document.body.classList.remove('menu-open');
     document.body.style.overflow = '';
     document.documentElement.style.overflow = '';
   };
-  // Mark current page so the floating panel shows the gold left indicator
+  // Mark current page so the floating panel shows the active state
   const currentPage = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
   mobileMenu.querySelectorAll('a').forEach(link => {
     const href = (link.getAttribute('href') || '').toLowerCase();
@@ -66,6 +68,7 @@ if (hamburger && mobileMenu) {
     e.stopPropagation();
     hamburger.classList.toggle('active');
     mobileMenu.classList.toggle('active');
+    if (mobileMenuOverlay) mobileMenuOverlay.classList.toggle('active');
     const isOpen = mobileMenu.classList.contains('active');
     if (siteHeader) siteHeader.classList.toggle('menu-open', isOpen);
     // Lock background scroll (body + root) while menu is open; menu itself keeps its own scroll
@@ -77,6 +80,9 @@ if (hamburger && mobileMenu) {
   mobileMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', closeMobileMenu);
   });
+  if (mobileMenuOverlay) {
+    mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+  }
   const mobileMenuClose = mobileMenu.querySelector('.mobile-menu-close');
   if (mobileMenuClose) {
     mobileMenuClose.addEventListener('click', closeMobileMenu);
