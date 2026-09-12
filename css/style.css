@@ -67,39 +67,9 @@
   }
   .header .container {
     overflow: visible !important;
-  }  /* Hamburger morphs into X in place (same element = same position, guaranteed) */  .hamburger.active span {    width: 24px;  }  .hamburger.active span:nth-child(1) {    transform: rotate(45deg) translateY(7px);  }  .hamburger.active span:nth-child(2) {    opacity: 0;  }  .hamburger.active span:nth-child(3) {    transform: rotate(-45deg) translateY(-7px);  }  /* Keep header above open menu so logo + morphing icon stay visible/tappable */    .header.transparent.menu-open {
+  }  /* Hamburger morphs into X in place (same element = same position, guaranteed) */  .hamburger.active span {    width: 24px;  }  .hamburger.active span:nth-child(1) {    transform: rotate(45deg) translateY(7px);  }  .hamburger.active span:nth-child(2) {    opacity: 0;  }  .hamburger.active span:nth-child(3) {    transform: rotate(-45deg) translateY(-7px);  }  /* Keep header above open menu so logo + morphing icon stay visible/tappable */    /* Menu open - keep original scroll-based colors (transparent at hero, white on scroll) - no color change on hamburger click */
+  .header.menu-open {
     z-index: 3000;
-    background: transparent;
-    box-shadow: none;
-    border-bottom: none;
-    -webkit-backdrop-filter: none;
-    backdrop-filter: none;
-  }
-  .header.transparent.menu-open .nav-logo-name {
-    color: #fff;
-  }
-  .header.transparent.menu-open .nav-logo-tagline {
-    color: var(--gold-light);
-  }
-  .header.transparent.menu-open .hamburger span {
-    background: #fff;
-  }
-  .header.scrolled.menu-open {
-    z-index: 3000;
-    background: #fff;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
-    border-bottom: 1px solid rgba(201, 168, 76, 0.35);
-    -webkit-backdrop-filter: none;
-    backdrop-filter: none;
-  }
-  .header.scrolled.menu-open .nav-logo-name {
-    color: var(--deep-navy);
-  }
-  .header.scrolled.menu-open .nav-logo-tagline {
-    color: var(--rich-gold);
-  }
-  .header.scrolled.menu-open .hamburger span {
-    background: var(--deep-navy);
   }  /* Separate close button removed; hamburger-X serves as the close control */  .mobile-menu-close {    display: none;  }  /* Scroll-lock backup: applied via body class while the mobile menu is open */  body.menu-open {    overflow: hidden;  }  /* ===== Classic right slide-in drawer (mobile only, page stays visible left) ===== */  .mobile-menu {    display: flex;    flex-direction: column;    align-items: stretch;    justify-content: flex-start;    gap: 0;    position: fixed;    top: 0;    right: 0;    bottom: auto;    left: auto;    width: min(290px, 84vw);    height: auto;    max-height: calc(100vh - 16px);    max-height: calc(100dvh - 16px);    overflow-y: auto;    padding: calc(var(--header-height, 68px) + 6px) 22px 20px;    background: linear-gradient(180deg, rgba(20, 26, 52, 0.88), rgba(10, 12, 28, 0.9));    -webkit-backdrop-filter: blur(16px);    backdrop-filter: blur(16px);    border-left: 1px solid rgba(201, 168, 76, 0.35);    border-bottom: 1px solid rgba(201, 168, 76, 0.35);    border-radius: 0 0 0 24px;    box-shadow: -30px 30px 80px rgba(0, 0, 0, 0.5);    z-index: 2500;    visibility: hidden;    transform: translateX(103%);    transition: transform 0.34s cubic-bezier(0.22, 0.8, 0.3, 1), visibility 0s linear 0.35s;    pointer-events: none;    text-align: left;    counter-reset: mnav;  }  .mobile-menu.active {    visibility: visible;    transform: none;    pointer-events: auto;    transition: transform 0.34s cubic-bezier(0.22, 0.8, 0.3, 1), visibility 0s;  }  /* Drawer brand header */  .md-brand {    display: flex;    align-items: center;    gap: 10px;    padding-bottom: 14px;    margin-bottom: 8px;    border-bottom: 1px solid rgba(201, 168, 76, 0.25);  }  .md-brand img {    width: 40px;    height: 40px;    border-radius: 50%;    object-fit: cover;    border: 1.5px solid var(--rich-gold);    background: #fff;    flex: none;  }  .md-brand > div {    display: flex;    flex-direction: column;    min-width: 0;  }  .md-brand > div span:first-child {    font-family: 'Marcellus', serif;    font-size: 0.95rem;    color: #fff;    white-space: nowrap;  }  .md-brand > div span:last-child {    font-family: 'Cormorant Garamond', serif;    font-size: 0.58rem;    letter-spacing: 0.22em;    text-transform: uppercase;    color: var(--gold-light);  }  /* Drawer rows: link + sliding arrow */  .mobile-menu a {    position: relative;    display: flex;    align-items: center;    gap: 12px;    width: 100%;    padding: 13px 4px;    counter-increment: mnav;    color: #f2ede2;    font-family: 'Marcellus', serif;    font-size: 1.08rem;    font-weight: 400;    letter-spacing: 0.04em;    text-align: left;    border-bottom: 1px solid rgba(255, 255, 255, 0.07);    opacity: 0;    transform: translateX(18px);    transition: opacity 0.3s ease-out, transform 0.32s ease-out, color 0.25s, background 0.25s;  }  .mobile-menu a::before {    content: '0' counter(mnav);    flex: none;    width: 24px;    font-family: 'Inter', sans-serif;    font-size: 0.6rem;    font-weight: 600;    letter-spacing: 0.14em;    color: rgba(201, 168, 76, 0.6);    transition: color 0.25s;  }  .mobile-menu a::after {
       display: none !important;
       content: none !important;
