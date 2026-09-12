@@ -25,12 +25,20 @@
   }
   .header.transparent .nav-logo-name {
     color: #fff;
+    text-shadow: 0 1px 10px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.4);
   }
   .header.transparent .nav-logo-tagline {
     color: var(--gold-light);
+    text-shadow: 0 1px 8px rgba(0,0,0,0.5);
   }
   .header.transparent .hamburger span {
     background: #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,0.4);
+  }
+  .header.transparent .hamburger {
+    background: rgba(10,10,26,0.22);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
   }
   .header.scrolled {
     background: #fff;
@@ -89,11 +97,19 @@
   }
   .header.transparent:not(.menu-open) .nav-logo-name {
     color: #fff;
+    text-shadow: 0 1px 10px rgba(0,0,0,0.55), 0 0 1px rgba(0,0,0,0.4);
   }
   .header.transparent:not(.menu-open) .nav-logo-tagline {
     color: var(--gold-light);
+    text-shadow: 0 1px 8px rgba(0,0,0,0.5);
   }
   .header.transparent:not(.menu-open) .hamburger span {
     background: #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,0.4);
+  }
+  .header.transparent:not(.menu-open) .hamburger {
+    background: rgba(10,10,26,0.22);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
   }
 }
