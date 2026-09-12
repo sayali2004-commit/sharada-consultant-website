@@ -285,4 +285,14 @@
     backdrop-filter: blur(20px) !important;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08) !important;
   }
+
+/* gold line spacing - mobile only */
+@media (max-width: 767px) {
+  .mobile-menu a {
+    padding-left: 20px !important;
+  }
+  .mobile-menu a.active {
+    padding-left: 28px !important;
+  }
+}
 }
