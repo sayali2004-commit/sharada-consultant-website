@@ -41,11 +41,11 @@
     backdrop-filter: blur(4px);
   }
   .header.scrolled {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.98);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
-    border-bottom: 1px solid rgba(201, 168, 76, 0.35);
-    -webkit-backdrop-filter: none;
-    backdrop-filter: none;
+    border-bottom: none;
   }
   .header.scrolled .nav-logo-name {
     color: var(--deep-navy);
